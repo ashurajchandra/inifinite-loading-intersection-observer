@@ -19,18 +19,18 @@ function addItem(count, lastIndex = 0) {
 
 function handleScroll() {
     console.log("loadin-before",loading)
-  if (loading) return;
+//   if (loading) return;
 
   if (window.innerHeight + window.scrollY >= document.documentElement.offsetHeight) {
     loading = true;
-    if(loading){
-        loader()
-    }else{
-        const loadingElement = document.querySelector("#hello")
-        if(loadingElement){
-            loadingElement.remove()
-        }
-    };
+    // if(loading){
+    //     loader()
+    // }else{
+    //     const loadingElement = document.querySelector("#hello")
+    //     if(loadingElement){
+    //         loadingElement.remove()
+    //     }
+    // };
     setTimeout(() => {
       addItem(10, container.children.length);
     }, 2000);
